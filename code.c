@@ -1,13 +1,10 @@
 /*
  * Created by Sophie N
  * Created on March 4, 2025
- 
- * Blink with variable 
  * 
  * Turns an RGB LED on, showing the different possible colors. 
  */
 
- const int PIN_5 = 5;
  int blink_time = 1000;
   
  void setup() 
