@@ -1,48 +1,26 @@
 """
 Created by: Sophie
 Created on: Mar 2025
-This module is a Micro:bit MicroPython program that changes the color of a RGB LED
+changes the color of a RGB LED
 """
 
-from microbit import *
+import time
+import board
+import digitalio
 
-display.clear
-display.show(Image.HEART)
+#variables
+PIN_5 = digitalio.DigitalInOut(board.GP5)
+PIN_6 = digitalio.DigitalInOut(board.GP6)
+PIN_7 = digitalio.DigitalInOut(board.GP7)
+PIN_5.direction = digitalio.Direction.OUTPUT
+PIN_6.direction = digitalio.Direction.OUTPUT
+PIN_7.direction = digitalio.Direction.OUTPUT
+blink_time = 1
 
 while True:
-    if button_a.is_pressed():
-        # red
-        pin16.write_digital(1)
-        display.scroll("Red")
-        sleep(1000)
-        pin16.write_digital(0)
-        # green
-        pin15.write_digital(1)
-        display.scroll("green")
-        sleep(1000)
-        pin15.write_digital(0)
-        # blue
-        pin14.write_digital(1)
-        display.scroll("blue")
-        sleep(1000)
-        # magenta
-        pin16.write_digital(1)
-        display.scroll("magenta")
-        sleep(1000)
-        pin16.write_digital(0)
-        # cyan
-        pin15.write_digital(1)
-        display.scroll("cyan")
-        sleep(1000)
-        pin14.write_digital(0)
-        # yellow
-        pin16.write_digital(1)
-        display.scroll("yellow")
-        sleep(1000)
-        # white
-        pin14.write_digital(1)
-        display.scroll("white")
-        sleep(1000)
-        pin16.write_digital(0)
-        pin15.write_digital(0)
-        pin14.write_digital(0)
+    #turns LED off
+    PIN_5.value = False
+    PIN_6.value = False
+    PIN_7.value = False
+    time.sleep(blink_time)
+
