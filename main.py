@@ -24,3 +24,45 @@ while True:
     PIN_7.value = False
     time.sleep(blink_time)
 
+    #green
+    PIN_5.value = True
+    PIN_6.value = False
+    PIN_7.value = False
+    time.sleep(blink_time)
+
+    #blue
+    PIN_5.value = False
+    PIN_6.value = True
+    PIN_7.value = False
+    time.sleep(blink_time)
+
+    #red
+    PIN_5.value = False
+    PIN_6.value = False
+    PIN_7.value = True
+    time.sleep(blink_time)
+
+    #cyan
+    PIN_5.value = True
+    PIN_6.value = True
+    PIN_7.value = False
+    time.sleep(blink_time)
+
+    #yellow
+    PIN_5.value = True
+    PIN_6.value = False
+    PIN_7.value = True
+    time.sleep(blink_time)
+
+    #magenta
+    PIN_5.value = False
+    PIN_6.value = True
+    PIN_7.value = True
+    time.sleep(blink_time)
+
+    #white
+    PIN_5.value = True
+    PIN_6.value = True
+    PIN_7.value = True
+    time.sleep(blink_time)
+
